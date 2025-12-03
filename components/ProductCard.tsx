@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Product } from '../types';
-import { CheckCircle, ShoppingCart, Share2, Wind, Shield, Activity, Heart, Sparkles, Zap, Package } from 'lucide-react';
+import { CheckCircle, ArrowRight, Share2, Wind, Shield, Activity, Heart, Sparkles, Zap, Package } from 'lucide-react';
 
 interface ProductCardProps {
   product: Product;
@@ -88,10 +88,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onViewDetails }) => 
             <h3 className="text-xl font-bold text-slate-800">{product.name}</h3>
         </div>
         
-        <div className="mb-4">
-           {product.price && <span className="text-lg font-bold text-secondary-600 block">{product.price}</span>}
-        </div>
-        
         <p className="text-slate-500 text-sm mb-4 leading-relaxed line-clamp-3">
           {product.description}
         </p>
@@ -112,7 +108,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onViewDetails }) => 
             className="w-full bg-slate-50 hover:bg-primary-600 text-slate-700 hover:text-white border border-slate-200 hover:border-transparent font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 group-btn"
           >
              <span>عرض التفاصيل</span>
-             <ShoppingCart className="w-4 h-4 text-secondary-500 group-hover:text-white transition-colors" />
+             <ArrowRight className="w-4 h-4 text-secondary-500 group-hover:text-white transition-colors" />
           </button>
         </div>
       </div>

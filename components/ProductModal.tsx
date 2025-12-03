@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { X, CheckCircle, ShoppingCart, Tag, Info, Star, Wind, Shield, Activity, Heart, Sparkles, Zap, Package } from 'lucide-react';
+import { X, CheckCircle, Store, Tag, Info, Star, Wind, Shield, Activity, Heart, Sparkles, Zap, Package } from 'lucide-react';
 import { Product } from '../types';
 
 interface ProductModalProps {
@@ -44,7 +44,6 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
           <div className="absolute bottom-4 right-4 left-4 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl shadow-sm border border-slate-200 md:hidden">
              <div className="flex justify-between items-center">
                 <span className="font-bold text-slate-800">{product.category}</span>
-                {product.price && <span className="font-bold text-secondary-600">{product.price}</span>}
              </div>
           </div>
         </div>
@@ -72,9 +71,6 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
                     </div>
                     <div>
                         <h2 className="text-3xl font-bold text-slate-900 mb-1">{product.name}</h2>
-                        {product.price && (
-                            <div className="text-2xl font-bold text-secondary-500">{product.price}</div>
-                        )}
                     </div>
                 </div>
 
@@ -108,12 +104,10 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
                 </div>
             </div>
 
-            {/* Footer Action */}
-            <div className="p-6 border-t border-slate-100 bg-slate-50 flex-shrink-0">
-                <button className="w-full bg-secondary-500 hover:bg-secondary-600 text-white font-bold py-4 rounded-xl shadow-lg transition-transform active:scale-95 flex items-center justify-center gap-2 hover:shadow-orange-200">
-                    <ShoppingCart className="w-5 h-5" />
-                    <span>اطلب المنتج الآن</span>
-                </button>
+            {/* Footer Action - Informational only */}
+            <div className="p-6 border-t border-slate-100 bg-slate-50 flex-shrink-0 flex items-center justify-center gap-2 text-slate-500 font-medium">
+                <Store className="w-5 h-5 text-secondary-500" />
+                <span>متوفر في جميع الصيدليات الكبرى</span>
             </div>
         </div>
       </div>
