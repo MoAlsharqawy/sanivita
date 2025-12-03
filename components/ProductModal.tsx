@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { X, CheckCircle, ShoppingCart, Tag, Info, Star } from 'lucide-react';
+import { X, CheckCircle, ShoppingCart, Tag, Info, Star, Wind, Shield, Activity, Heart, Sparkles, Zap, Package } from 'lucide-react';
 import { Product } from '../types';
 
 interface ProductModalProps {
@@ -8,6 +9,18 @@ interface ProductModalProps {
 }
 
 const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
+  const iconMap: Record<string, React.ElementType> = {
+    wind: Wind,
+    shield: Shield,
+    activity: Activity,
+    heart: Heart,
+    sparkles: Sparkles,
+    zap: Zap,
+    package: Package
+  };
+
+  const IconComponent = iconMap[product.icon] || Package;
+
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-primary-900/60 backdrop-blur-sm" onClick={onClose}>
       <div 
@@ -46,20 +59,26 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
             </button>
 
             <div className="p-8 overflow-y-auto custom-scrollbar flex-1">
-                <div className="flex items-center gap-2 mb-2">
+                <div className="flex items-center gap-2 mb-4">
                     <span className="bg-primary-50 text-primary-700 px-3 py-1 rounded-full text-xs font-bold border border-primary-100 flex items-center gap-1">
                         <Tag className="w-3 h-3" />
                         {product.category}
                     </span>
                 </div>
                 
-                <h2 className="text-3xl font-bold text-slate-900 mb-2">{product.name}</h2>
-                
-                {product.price && (
-                    <div className="text-2xl font-bold text-secondary-500 mb-6">{product.price}</div>
-                )}
+                <div className="flex items-start gap-4 mb-2">
+                    <div className="bg-secondary-50 p-3 rounded-2xl border border-secondary-100 hidden sm:block">
+                        <IconComponent className="w-8 h-8 text-secondary-500" />
+                    </div>
+                    <div>
+                        <h2 className="text-3xl font-bold text-slate-900 mb-1">{product.name}</h2>
+                        {product.price && (
+                            <div className="text-2xl font-bold text-secondary-500">{product.price}</div>
+                        )}
+                    </div>
+                </div>
 
-                <div className="space-y-8">
+                <div className="space-y-8 mt-6">
                     <div>
                         <h3 className="flex items-center gap-2 text-lg font-bold text-slate-800 mb-3">
                             <Info className="w-5 h-5 text-accent-500" />

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Page, Product } from '../types';
 import { ArrowRight, Activity, ShieldCheck, Leaf, Users } from 'lucide-react';
@@ -33,7 +34,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
             {/* Text Box Container */}
-            <div className="text-right space-y-8 animate-fade-in-up bg-white/50 backdrop-blur-md p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/50">
+            <div className="text-right space-y-8 animate-fade-in-up bg-white/80 backdrop-blur-md p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/50">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 rounded-full border border-primary-100">
                 <span className="w-2 h-2 rounded-full bg-secondary-500 animate-pulse"></span>
                 <span className="text-sm font-bold text-primary-800">الخيار الأول للأطباء والمتخصصين</span>

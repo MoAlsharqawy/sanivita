@@ -7,6 +7,7 @@ export interface Product {
   benefits: string[];
   image: string;
   price?: string;
+  icon: string;
 }
 
 export interface Article {

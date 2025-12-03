@@ -35,7 +35,7 @@ export const articles: Article[] = [
       'رابعاً: المكملات الغذائية الداعمة. في بعض الأحيان، قد لا يكفي النظام الغذائي وحده. هنا يأتي دور المكملات مثل "لابينسيرون شراب" الذي يحتوي على الحديد والزنك وفيتامين سي، و"ابينسيكال شراب" الغني بالكالسيوم والمناعة.',
       'تذكر أن الوقاية خير من العلاج، وبناء مناعة قوية هو استثمار في صحة ومستقبل طفلك.'
     ],
-    image: 'https://images.unsplash.com/photo-1603354350317-6f7aaa5911c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+    image: 'https://lh3.googleusercontent.com/d/1IIs8B3duWROGo1t7rh9X_YFJ5mjo6vJn',
     date: '20 سبتمبر 2023',
     author: 'د. محمد علي',
     category: 'صحة الأطفال',
@@ -56,7 +56,7 @@ export const articles: Article[] = [
       'منتجات الألبان، الخضروات الورقية الداكنة، والأسماك هي مصادر ممتازة. ولكن في حالات النمو السريع عند الأطفال أو الحمل أو التقدم في العمر، قد تحتاج لدعم إضافي.',
       'منتجنا "ابينسيكال شراب" يوفر تركيبة متوازنة من الكالسيوم مع فيتامين د3 والمغنسيوم لضمان أقصى امتصاص وفائدة للجسم.'
     ],
-    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+    image: 'https://lh3.googleusercontent.com/d/1cizVQkjJuBLvxfSEzJ1G6UmiCh-X6efl',
     date: '5 نوفمبر 2023',
     author: 'فريق ساني فيتا الطبي',
     category: 'تغذية',
